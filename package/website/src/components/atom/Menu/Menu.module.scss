@@ -1,0 +1,46 @@
+.Menu {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 100%;
+
+    .menuIcon {
+        display: grid;
+        place-items: center;
+        gap: 14px;
+
+        .bar {
+            width: 37px;
+            height: 5px;
+            background-color: var(--brown-100);
+            transition: width, transform 0.2s ease-in-out;
+        }
+
+        .second {
+            width: 45px;
+        }
+
+
+    }
+
+    &.open {
+        .first {
+            width: 45px;
+            transform: translateY(18px) rotateZ(60deg);
+        }
+
+        .third {
+            width: 45px;
+            transform: translateY(-20px) rotateZ(-60deg);
+        }
+    }
+
+    &.close {
+    }
+
+
+    .text {
+        position: absolute;
+        bottom: 15px;
+    }
+}
