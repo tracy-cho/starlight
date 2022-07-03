@@ -1,16 +1,14 @@
 @import "style/mixin";
 
 .App {
-    border: 3px solid var(--brown-100);
-    border-radius: 3px;
+    overflow: hidden;
     display: grid;
-
     @include desktop {
-        width: calc(100% - 2em);
-        grid-template-columns: 100px 1fr minmax(calc(100% - 100px - 300px), 900px);
+        position: relative;
+        width: fit-content;
+        max-width: calc(100% - 2em);
         grid-template-rows: minmax(calc(100% - 2em), 900px);
-    }
-    @include tablet {
-        grid-template-columns: 100px 1fr 900px;
+        padding-left: 100px;
     }
 }
+

@@ -1,7 +1,15 @@
 .Sidebar {
     display: grid;
+    border: 3px solid var(--brown-100);
+    border-radius: 3px 0 0 3px;
     border-right: 1px solid var(--brown-100);
     grid-template-rows: 100px 100px 1fr 100px 42px;
+    background-color: var(--ivory-100);
+    position: absolute;
+    height: 100%;
+    box-sizing: border-box;
+    width: 100px;
+    z-index: 2;
 
     > * {
         border-bottom: 1px solid var(--brown-100);

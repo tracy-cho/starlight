@@ -16,7 +16,7 @@ const cx = classNames.bind(styles);
 
 const Sidebar: React.FC<SidebarProps> = () => {
     const [sidebarOpen, setSidebarOpen] = useRecoilState(isSidebarOpen)
-    return <nav className={cx(styles.Sidebar)}>
+    return <nav className={cx(styles.Sidebar)} style={{backgroundImage: `url(${process.env.PUBLIC_URL}/noise.svg)`}}>
         <div className={cx(styles.logo)}><Logo/></div>
         <div className={cx(styles.menu)}
              onClick={() => setSidebarOpen(_ => !_)}>
