@@ -21,6 +21,7 @@ root.render(
         <RecoilRoot>
             <BrowserRouter>
                 <App/>
+                <span><b>(C) copyright by. tracy-cho All right reserved.</b></span>
             </BrowserRouter>
         </RecoilRoot>
     </React.StrictMode>,

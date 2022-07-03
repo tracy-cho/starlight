@@ -31,11 +31,51 @@
 
         &.top {
             border-width: 1px 0 2px 0;
-
         }
 
         &.bottom {
             border-width: 2px 0 1px 0;
+        }
+    }
+
+    article {
+        font-size: 3em;
+        padding: 2em 0.5em;
+        //column-count: 3;
+        line-height: 1.6;
+        text-align: justify ;
+
+
+        .thumbnail {
+            width: 540px;
+            height: 340px;
+            overflow: hidden;
+            border-radius: 2px;
+            margin-top: 2em;
+
+            img {
+                width: 100%;
+            }
+            &:first-child{
+                margin-top: 0;
+            }
+
+            &:nth-child(2n-1) {
+                float: left;
+                margin-right: 2em;
+                margin-bottom: 2em;
+            }
+
+            &:nth-child(2n) {
+                float: right;
+                margin-left: 2em;
+                margin-bottom: 2em;
+            }
+
+        }
+
+        p + p {
+            margin-top: 1em;
         }
     }
 
