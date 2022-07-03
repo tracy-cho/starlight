@@ -3,6 +3,7 @@
 .App {
     overflow: hidden;
     display: grid;
+    margin: 0 2em;
     @include desktop {
         position: relative;
         width: fit-content;
@@ -10,5 +11,21 @@
         grid-template-rows: minmax(calc(100% - 2em), 900px);
         padding-left: 100px;
     }
+    @include tablet {
+        > * {
+            display: none;
+        }
+    }
 }
 
+.mobile {
+    @include desktop {
+        display: none;
+    }
+    display: block;
+    text-align: center;
+    font-size: 4em;
+    font-weight: bold;
+    color: var(--brown-100);
+
+}

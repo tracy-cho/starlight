@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames/bind";
+import {NavLink} from "react-router-dom";
 
 import {useRecoilState} from "recoil";
 import {isSidebarOpen} from "store/ui";
@@ -17,13 +18,21 @@ const cx = classNames.bind(styles);
 const Sidebar: React.FC<SidebarProps> = () => {
     const [sidebarOpen, setSidebarOpen] = useRecoilState(isSidebarOpen)
     return <nav className={cx(styles.Sidebar)} style={{backgroundImage: `url(${process.env.PUBLIC_URL}/noise.svg)`}}>
-        <div className={cx(styles.logo)}><Logo/></div>
+        <div className={cx(styles.logo)}>
+            <NavLink to={'/'}>
+                <Logo/>
+            </NavLink>
+        </div>
         <div className={cx(styles.menu)}
              onClick={() => setSidebarOpen(_ => !_)}>
             <Menu open={sidebarOpen}/>
         </div>
-        <MenuList/>
-        <div>Sign in</div>
+        <MenuList state={[sidebarOpen, setSidebarOpen]}/>
+        <div className={cx(styles.signIn)}>
+            <NavLink to={'/sign-in'}>
+                SIGN <br/> IN
+            </NavLink>
+        </div>
         <div className={cx(styles.iconWrapper)}>
             <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path

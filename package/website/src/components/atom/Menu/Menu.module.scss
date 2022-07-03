@@ -3,10 +3,12 @@
     display: grid;
     place-items: center;
     height: 100%;
+    will-change: gap;
 
     .menuIcon {
         display: grid;
         place-items: center;
+        transition: gap 0.15s linear;
         gap: 14px;
 
         .bar {
@@ -23,7 +25,17 @@
 
     }
 
+    &:hover {
+        .menuIcon {
+            gap: 10px
+        }
+    }
+
     &.open {
+        .menuIcon {
+            gap: 14px;
+        }
+
         .first {
             width: 45px;
             transform: translateY(18px) rotateZ(60deg);
@@ -38,7 +50,6 @@
     &.close {
     }
 
-
     .text {
         position: absolute;
         font-size: 2em;
@@ -46,6 +57,8 @@
         font-family: var(--emberly);
         font-weight: 700;
         letter-spacing: 1.1em;
-        margin-right:-1.1em;
+        margin-right: -1.1em;
     }
+
+
 }
