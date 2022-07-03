@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "declaration": true,
+    "declarationDir": "lib",
+    "outDir": "lib",
+    "allowJs": true,
+    "isolatedModules": true,
+    "baseUrl": "./src"
+  },
+  "include": [
+    "./src",
+    "custom.d.ts"
+  ],
+  "exclude": [
+    "node_modules/*",
+    "lib/**/*",
+    "src/**/**.stories.*"
+  ]
+}
