@@ -16,7 +16,7 @@ const Menu: React.FC<MenuProps> = ({open = true}) => {
             <div className={cx(styles.bar, styles.second)}/>
             <div className={cx(styles.bar, styles.third)}/>
         </div>
-        <span className={cx(styles.text)}>menu</span>
+        <span className={cx(styles.text)}>MENU</span>
     </div>;
 };
 

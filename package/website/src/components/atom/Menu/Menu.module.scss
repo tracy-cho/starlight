@@ -41,6 +41,11 @@
 
     .text {
         position: absolute;
-        bottom: 15px;
+        font-size: 2em;
+        bottom: 1.5em;
+        font-family: var(--emberly);
+        font-weight: 700;
+        letter-spacing: 1.1em;
+        margin-right:-1.1em;
     }
 }
