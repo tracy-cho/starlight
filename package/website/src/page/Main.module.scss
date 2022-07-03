@@ -1,3 +1,42 @@
 .Main {
+    main {
+        box-sizing: border-box;
+        padding: 4em;
+        overflow-y: scroll;
+    }
+
+    header {
+        display: grid;
+        place-items: center;
+        font-family: var(--emberly);
+        height: 31em;
+
+        .title {
+            font-weight: bolder;
+            font-size: 12em;
+        }
+
+
+    }
+
+    .center {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    hr {
+        height: 2px;
+        border-style: solid;
+        border-color: var(--brown-100);
+
+        &.top {
+            border-width: 1px 0 2px 0;
+
+        }
+
+        &.bottom {
+            border-width: 2px 0 1px 0;
+        }
+    }
 
 }

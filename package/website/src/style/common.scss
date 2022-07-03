@@ -4,7 +4,7 @@
     --brown-100: #4A2619;
     --red-100: #aa675d;
     --ivory-100: #EEECE8;
-    --emberly : Emberly, pretendard, serif;
+    --emberly: Emberly, pretendard, serif;
 }
 
 #star-light {
@@ -12,8 +12,9 @@
     place-items: center;
     height: 100%;
     width: 100%;
-    font-family: 'ChosunNm','Pretendard', serif;
+    font-family: 'ChosunNm', 'Pretendard', serif;
     font-size: 4px;
+    color: var(--brown-100);
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

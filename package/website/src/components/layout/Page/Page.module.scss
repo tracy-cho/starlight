@@ -1,4 +1,4 @@
-.Page{
+.Page {
     display: grid;
     grid-template-columns: minmax(calc(100% - 900px), 300px) 900px;
     border-style: solid;
@@ -8,4 +8,5 @@
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     background-color: var(--ivory-100);
+    box-sizing: border-box;
 }
