@@ -1,11 +1,11 @@
 .page-enter {
     transform: translateX(calc(-100% + 3px));
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 .page-enter-active {
     transform: translateX(calc(-100% + 3px));
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 .page-enter-done {
@@ -16,5 +16,5 @@
 
 .page-exit-active {
     transform: translateX(calc(-100% + 3px));
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.1s ease-in-out;
 }
