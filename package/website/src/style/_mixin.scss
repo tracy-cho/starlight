@@ -1,0 +1,21 @@
+$breakpoint-wide: 1300px;
+$breakpoint-narrow: 1024px;
+$breakpoint-mobile: 768px;
+
+@mixin wide {
+    @media (min-width: #{$breakpoint-wide}) {
+        @content;
+    }
+}
+
+@mixin narrow {
+    @media (min-width: #{$breakpoint-narrow}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media  (max-width: #{$breakpoint-narrow - 1px}) {
+        @content;
+    }
+}

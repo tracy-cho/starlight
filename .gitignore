@@ -112,3 +112,4 @@ dist
 !.yarn/versions
 
 .editorconfig
+/.idea/

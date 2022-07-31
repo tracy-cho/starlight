@@ -1,6 +1,8 @@
+@import "../../../style/mixin";
+
 .Page {
     display: grid;
-    grid-template-columns: minmax(calc(100% - 900px), 300px) 900px;
+
     border-style: solid;
     border-color: var(--brown-100);
     border-width: 3px;
@@ -9,4 +11,16 @@
     border-bottom-right-radius: 3px;
     background-color: var(--ivory-100);
     box-sizing: border-box;
+    grid-template-columns: minmax(900px, 1200px);
+
+    aside {
+        display: none;
+    }
+
+    @include wide {
+        grid-template-columns: minmax(calc(100% - 900px), 300px) 900px;
+        aside {
+            display: block;
+        }
+    }
 }

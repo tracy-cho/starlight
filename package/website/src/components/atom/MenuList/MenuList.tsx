@@ -1,5 +1,5 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import classNames from "classnames/bind";
 
 import styles from "./MenuList.module.scss";
@@ -12,46 +12,46 @@ const cx = classNames.bind(styles);
 
 //TODO auth 처리하기
 const list = [{
-    route: 'mail',
-    auth: 'admin'
+  route: 'mail',
+  auth: 'admin'
 }, {
-    route: 'book',
+  route: 'book'
 }, {
-    route: 'dev',
-    auth: 'dev'
+  route: 'dev',
+  auth: 'dev'
 }, {
-    route: 'draw',
+  route: 'draw'
 }, {
-    title: 'OTAKU',
-    route: 'otaku-draw',
+  title: 'OTAKU',
+  route: 'otaku-draw'
 }, {
-    route: 'memo',
+  route: 'memo'
 }, {
-    title: 'PIC',
-    route: 'picture',
+  title: 'PIC',
+  route: 'picture'
 }, {
-    route: 'dairy',
-    auth: 'friend'
+  route: 'dairy',
+  auth: 'friend'
 }, {
-    route: 'guest',
-}]
+  route: 'guest'
+}];
 
-const MenuList: React.FC<MenuListProps> = ({state}) => {
-    const [sidebarOpen, setSidebarOpen] = state
-    return <ul className={cx(styles.MenuList, styles[sidebarOpen ? 'open' : 'close'])}
-               style={{backgroundImage: `url(${process.env.PUBLIC_URL}/noise.svg)`}}>
-        {
-            list.map(({route, title}) => <li key={route} className={cx(styles.MenuItem)}>
-                <NavLink
-                    to={`/${route}`}
-                    onClick={() => setSidebarOpen(_ => !_)}
-                >
-                    {title ?? route?.toUpperCase()}
-                </NavLink>
-                <div className={cx(styles.line)}/>
-            </li>)
-        }
-    </ul>;
+const MenuList: React.FC<MenuListProps> = ({ state }) => {
+  const [sidebarOpen, setSidebarOpen] = state;
+  return <ul className={cx(styles.MenuList, styles[sidebarOpen ? 'open' : 'close'])}
+    style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/noise.svg)` }}>
+    {
+      list.map(({ route, title }) => <li key={route} className={cx(styles.MenuItem)}>
+        <NavLink
+          to={`/${route}`}
+          onClick={() => setSidebarOpen(_ => !_)}
+        >
+          {title ?? route?.toUpperCase()}
+        </NavLink>
+        <div className={cx(styles.line)}/>
+      </li>)
+    }
+  </ul>;
 };
 
-export {MenuList}
+export { MenuList };

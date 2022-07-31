@@ -11,11 +11,11 @@ type PageProps = {
 
 const cx = classNames.bind(styles);
 
-const Page: React.FC<PageProps> = ({children, forwardRef, cs}) => {
-    return <div className={cx(styles.Page, cs)} ref={forwardRef}
-                style={{backgroundImage: `url(${process.env.PUBLIC_URL}/noise.svg)`}}>
-        {children}
-    </div>;
+const Page: React.FC<PageProps> = ({ children, forwardRef, cs }) => {
+  return <div className={cx(styles.Page, cs)} ref={forwardRef}
+    style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/noise.svg)` }}>
+    {children}
+  </div>;
 };
 
-export {Page}
+export { Page };

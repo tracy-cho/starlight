@@ -10,6 +10,7 @@ import { Sidebar } from "components/layout/Sidebar";
 import { ErrorPage, GuestPage, MainPage } from "./page";
 
 import styles from "./App.module.scss";
+
 import 'style/Transition.scss';
 
 type AppProps = {};
@@ -26,8 +27,8 @@ const App: React.FC<AppProps> = () => {
           <Route path="/" element={<MainPage forwardRef={nodeRef}/>}/>
           <Route path="/guest" element={<GuestPage forwardRef={nodeRef}/>}/>
           <Route path="*"
-                 element={<ErrorPage
-                   forwardRef={nodeRef}/>}/>
+            element={<ErrorPage
+              forwardRef={nodeRef}/>}/>
         </Routes>
       </CSSTransition>
     </SwitchTransition>

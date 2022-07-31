@@ -9,15 +9,15 @@ type MenuProps = {
 
 const cx = classNames.bind(styles);
 
-const Menu: React.FC<MenuProps> = ({open = true}) => {
-    return <div className={cx(styles.Menu, styles[open ? 'open' : 'close'])}>
-        <div className={cx(styles.menuIcon)}>
-            <div className={cx(styles.bar, styles.first)}/>
-            <div className={cx(styles.bar, styles.second)}/>
-            <div className={cx(styles.bar, styles.third)}/>
-        </div>
-        <span className={cx(styles.text)}>MENU</span>
-    </div>;
+const Menu: React.FC<MenuProps> = ({ open = true }) => {
+  return <div className={cx(styles.Menu, styles[open ? 'open' : 'close'])}>
+    <div className={cx(styles.menuIcon)}>
+      <div className={cx(styles.bar, styles.first)}/>
+      <div className={cx(styles.bar, styles.second)}/>
+      <div className={cx(styles.bar, styles.third)}/>
+    </div>
+    <span className={cx(styles.text)}>MENU</span>
+  </div>;
 };
 
-export {Menu}
+export { Menu };

@@ -1,6 +1,6 @@
-import {atom} from "recoil";
+import { atom } from "recoil";
 
 export const isSidebarOpen = atom({
-    key: 'ui/sidebar',
-    default: false as boolean
-})
+  key: 'ui/sidebar',
+  default: false as boolean
+});

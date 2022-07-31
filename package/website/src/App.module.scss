@@ -4,7 +4,8 @@
     overflow: hidden;
     display: grid;
     margin: 0 2em;
-    @include desktop {
+
+    @include narrow {
         position: relative;
         width: fit-content;
         max-width: calc(100% - 2em);
@@ -19,7 +20,7 @@
 }
 
 .mobile {
-    @include desktop {
+    @include narrow {
         display: none;
     }
     display: block;
